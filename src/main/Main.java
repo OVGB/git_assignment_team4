@@ -3,9 +3,9 @@ package main;
 import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.util.Scanner;
 
-public class main {
+public class Main {
 
-    private static IOperation[] ops = {
+    private static ThreadedOperation[] ops = {
         new OpCircleCircummatance(),
         new LucasSeries()
     };
@@ -16,11 +16,14 @@ public class main {
         int input;
         Scanner scn = new Scanner(System.in);
 
-        for(IOperation op : ops){
+        for(ThreadedOperation op : ops){
             subject.addOperation(op);
+            op.setSubject(subject);
         }
 
         input = scn.nextInt();
-        subject.triggerEvent(input);
+        subject.setInput(input);
+        subject.triggerEvent();
+
     }
 }

@@ -1,16 +1,16 @@
 package main;
 
-public class OpCircleCircummatance implements IOperation {
+public class OpCircleCircummatance extends ThreadedOperation {
 
     private final double pi = 3.14;
 
     @Override
-    public void notifyOperation(int input) {
-        System.out.println("The Circle circumference with a radius " + input + " is " + operate(input) + ".");
+    public void notifyOperation() {
+        System.out.println("The Circle circumference with a radius " + subject.getInput() + " is " + operate() + ".");
     }
 
     @Override
-    public int operate(int input) {
-        return (int)(2 * pi * input);
+    public int operate() {
+        return (int)(2 * pi * subject.getInput());
     }
 }

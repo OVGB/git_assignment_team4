@@ -1,13 +1,14 @@
 package main;
 
-public class LucasSeries implements IOperation  {
+public class LucasSeries extends ThreadedOperation  {
 
-	  public void notifyOperation(int input) {
-	        System.out.println("The numbered entered for lucas series is " + input + " is " + operate(input) + " ");
+	  public void notifyOperation() {
+	        System.out.println("The numbered entered for lucas series is " + subject.getInput() + " is " + operate() + " ");
 	    }
 
 	    @Override
-	    public int operate(int n) {
+	    public int operate() {
+	  		int n = subject.getInput();
 	    	if(n==1)
 	    		return 2;
 	    	if(n==2)
@@ -17,7 +18,6 @@ public class LucasSeries implements IOperation  {
 	         for (int i = 2; i <= n; i++)  
 	         {}
 	           
-	         return operate(n-1)+operate(n-2); 
-	        
+	         return operate()+operate();
 	    
 	    }}
