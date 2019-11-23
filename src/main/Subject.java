@@ -5,22 +5,30 @@ import java.util.List;
 
 public class Subject {
 
-    private List<IOperation>  operations;
+    private int input;
+
+    private List<ThreadedOperation>  operations;
 
     public Subject() { this.operations = new ArrayList<>(); }
 
-    public void addOperation(IOperation op){
+    public void addOperation(ThreadedOperation op){
         this.operations.add(op);
     }
 
-    public List<IOperation> getOperations(){
+    public List<ThreadedOperation> getOperations(){
         return this.operations;
     }
 
-    public void triggerEvent(int input) {
-        for(IOperation op : this.operations)
-            op.notifyOperation(input);
+    public void triggerEvent() {
+        for(ThreadedOperation op : this.operations)
+            op.start();
     }
 
+    public int getInput() {
+        return input;
+    }
 
+    public void setInput(int input) {
+        this.input = input;
+    }
 }
