@@ -3,10 +3,11 @@ package main;
 import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.util.Scanner;
 
-public class Main {
+public class main {
 
     private static IOperation[] ops = {
         new OpCircleCircummatance(),
+        new LucasSeries()
     };
 
     public static void main(String[] args) {
