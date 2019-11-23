@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     private static IOperation[] ops = {
+        new OpCircleCircummatance(),
         new OpCircleCircummatance()
     };
 
