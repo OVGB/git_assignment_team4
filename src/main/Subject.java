@@ -30,5 +30,6 @@ public class Subject {
 
     public void setInput(int input) {
         this.input = input;
+        this.triggerEvent();
     }
 }
