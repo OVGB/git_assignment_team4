@@ -12,18 +12,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Subject subject = new Subject();
-        int input;
-        Scanner scn = new Scanner(System.in);
+        while(true) {
+            Subject subject = new Subject();
+            int input;
+            Scanner scn = new Scanner(System.in);
 
-        for(ThreadedOperation op : ops){
-            subject.addOperation(op);
-            op.setSubject(subject);
+            for (ThreadedOperation op : ops) {
+                subject.addOperation(op);
+                op.setSubject(subject);
+            }
+
+            input = scn.nextInt();
+            if (input == 0)             //Enter 0 to close program
+                break;
+            subject.setInput(input);
         }
-
-        input = scn.nextInt();
-        subject.setInput(input);
-        subject.triggerEvent();
 
     }
 }
