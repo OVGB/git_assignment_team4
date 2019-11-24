@@ -1,5 +1,3 @@
-package main;
-
 public class OpCircleCircummatance extends ThreadedOperation {
 
     private final double pi = 3.14;

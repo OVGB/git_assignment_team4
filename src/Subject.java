@@ -1,5 +1,3 @@
-package main;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +19,9 @@ public class Subject {
 
     public void triggerEvent() {
         for(ThreadedOperation op : this.operations)
-            op.start();
+            try {
+                op.start();
+            } catch (IllegalThreadStateException e) { op.notifyOperation(); }
     }
 
     public int getInput() {

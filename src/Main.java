@@ -1,6 +1,3 @@
-package main;
-
-import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.util.Scanner;
 
 public class Main {
@@ -26,6 +23,7 @@ public class Main {
             if (input == 0)             //Enter 0 to close program
                 break;
             subject.setInput(input);
+
         }
 
     }

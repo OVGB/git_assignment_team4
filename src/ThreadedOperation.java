@@ -1,5 +1,3 @@
-package main;
-
 public abstract class ThreadedOperation extends Thread implements IOperation {
     Subject subject;
 
