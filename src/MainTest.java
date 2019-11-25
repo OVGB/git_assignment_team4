@@ -18,6 +18,12 @@ public class MainTest {
         if (11 != LS.operate())
             System.exit(1);
 
+        SphereArea SA = new SphereArea();
+        SA.setSubject(sub);
+
+        if((int)(4 * 3.14 * input * input) != SA.operate())
+            System.exit(1);
+
 
     }
 }
