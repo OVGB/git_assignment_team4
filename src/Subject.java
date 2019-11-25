@@ -7,7 +7,9 @@ public class Subject {
 
     private List<ThreadedOperation>  operations;
 
-    public Subject() { this.operations = new ArrayList<>(); }
+  public Subject() { 
+      this.operations = new ArrayList<>(); 
+  }
 
     public void addOperation(ThreadedOperation op){
         this.operations.add(op);
