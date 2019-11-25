@@ -18,6 +18,12 @@ public class MainTest {
         if (11 != LS.operate())
             System.exit(1);
 
+        CircleArea CA = new CircleArea();
+        CA.setSubject(sub);
+        
+        if((int)(3.14 * input * input) != CA.operate())
+            System.exit(1);
+
 
     }
 }
