@@ -5,7 +5,9 @@ public class Main {
     private static ThreadedOperation[] ops = {
         new OpCircleCircummatance(),
         new LucasSeries(),
-        new SphereArea()
+        new SphereArea(),
+        new CircleArea()
+
     };
 
     public static void main(String[] args) {
