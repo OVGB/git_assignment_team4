@@ -5,9 +5,8 @@ public class Main {
     private static ThreadedOperation[] ops = {
         new OpCircleCircummatance(),
         new LucasSeries(),
-
+        new Fibonacci(),
         new PowerN(),
-
         new SphereArea(),
         new CircleArea(),
         new MultiplicationSeries()
