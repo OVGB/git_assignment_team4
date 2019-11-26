@@ -17,6 +17,12 @@ public class MainTest {
 
         if (11 != LS.operate())
             System.exit(1);
+        
+         Fibonacci F = new Fibonacci();
+         F.setSubject(sub);
+
+        if (5 != F.operate())
+            System.exit(1);
 
 
         SphereArea SA = new SphereArea();
