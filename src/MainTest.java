@@ -19,5 +19,25 @@ public class MainTest {
             System.exit(1);
 
 
+        SphereArea SA = new SphereArea();
+        SA.setSubject(sub);
+
+        if((int)(4 * 3.14 * input * input) != SA.operate())
+            System.exit(1);
+
+        CircleArea CA = new CircleArea();
+        CA.setSubject(sub);
+
+        if((int)(3.14 * input * input) != CA.operate())
+            System.exit(1);
+        
+        MultiplicationSeries MS = new MultiplicationSeries();
+        MS.setSubject(sub);
+        
+        if (120 != MS.operate())
+            System.exit(1);
+        
+
+
     }
 }

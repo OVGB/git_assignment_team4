@@ -5,7 +5,15 @@ public class Main {
     private static ThreadedOperation[] ops = {
         new OpCircleCircummatance(),
         new LucasSeries(),
-            new PowerN()
+
+        new PowerN(),
+
+        new SphereArea(),
+        new CircleArea(),
+        new MultiplicationSeries()
+            
+
+
     };
 
     public static void main(String[] args) {
