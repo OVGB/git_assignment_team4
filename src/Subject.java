@@ -21,9 +21,9 @@ public class Subject {
 
     public void triggerEvent() {
         for(ThreadedOperation op : this.operations)
-            try {
+            //try {
                 op.start();
-            } catch (IllegalThreadStateException e) { op.notifyOperation(); }
+            //} catch (IllegalThreadStateException e) { op.notifyOperation(); }
     }
 
     public int getInput() {
@@ -32,6 +32,11 @@ public class Subject {
 
     public void setInput(int input) {
         this.input = input;
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            //e.printStackTrace();
+        }
         this.triggerEvent();
     }
 }

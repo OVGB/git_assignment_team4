@@ -2,22 +2,18 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static ThreadedOperation[] ops = {
-        new OpCircleCircummatance(),
-        new LucasSeries(),
-        new Fibonacci(),
-        new PowerN(),
-        new SphereArea(),
-        new CircleArea(),
-        new MultiplicationSeries()
-            
-
-
-    };
-
     public static void main(String[] args) {
 
         while(true) {
+            ThreadedOperation[] ops = {
+                    new OpCircleCircummatance(),
+                    new LucasSeries(),
+                    new Fibonacci(),
+                    new PowerN(),
+                    new SphereArea(),
+                    new CircleArea(),
+                    new MultiplicationSeries()
+            };
             Subject subject = new Subject();
             int input;
             Scanner scn = new Scanner(System.in);
