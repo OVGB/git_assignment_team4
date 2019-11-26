@@ -10,7 +10,8 @@ public class Main {
 
         new SphereArea(),
         new CircleArea(),
-        new MultiplicationSeries()
+        new MultiplicationSeries(),
+        new Fibonacci()
             
 
 
